@@ -1,0 +1,21 @@
+<div class="accordion p-2" id="accordionExample" style="background-color: wheat;">
+  <div class="accordion-item ">
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed text-uppercase fw-bold text-center" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        <i class="fa fa-list text-uppercase fw-bold"> danh SÁCH MÔN HỌC</i>
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+      data-bs-parent="#accordionExample">
+      <div class="accordion-body p-0 m-0">
+        <div class="list-group text-cente">
+          <a ng-repeat="mh in cacmonhoc | orderBy:'Name'" href="#!tracnghiem/{{mh.Id}}/{{mh.Name}}"
+            class="list-group-item list-group-item-action">{{mh.Name | uppercase}}</a>
+          <a href="#" class="list-group-item list-group-item-action disabled" tabindex="-1" aria-disabled="true">A
+            disabled link item</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
